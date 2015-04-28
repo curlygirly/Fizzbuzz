@@ -1,25 +1,19 @@
 require 'fizzbuzz'
 
 describe 'fizzbuzz' do
-  it 'when number given is 3, return "fizz"' do
-  expect(fizzbuzz(3)).to eq "fizz"
-end
-  it 'when number given is 5, return "buzz"' do
-    expect(fizzbuzz(5)).to eq 'buzz'
+  it 'returns "fizz" for the number 3' do
+    expect(3.fizzbuzz).to eq 'fizz'
   end
-  it 'when number given is 15, return "fizzbuzz"' do
-    expect(fizzbuzz(15)).to eq 'fizzbuzz'
+  it 'returns "buzz" for the number 5' do
+    expect(5.fizzbuzz).to eq 'buzz'
   end
-  it 'when number given is 30, return "fizzbuzz"' do
-    expect(fizzbuzz(30)).to eq 'fizzbuzz'
+  it 'returns "fizzbuzz" if number is multiple of 15' do
+    expect(15.fizzbuzz).to eq 'fizzbuzz'
   end
-  it 'when number given is a multiple of 3 return "fizz"' do
-   expect(fizzbuzz(12)).to eq 'fizz'
- end
-  it 'when number given is a multiple of 15 return "fizzbuzz"' do
-    expect(fizzbuzz(45)).to eq 'fizzbuzz'
+  it 'returns "buzz" if number is multiple of five' do
+    expect(10.fizzbuzz).to eq 'buzz'
   end
-  it 'when number given is not a multiple of 5, 3, 15 return number'do
-    expect(fizzbuzz(12345679)).to eq 12345679
+  it 'returns "number" if number is not multiple of 3,5,15' do
+    expect(77.fizzbuzz).to eq 77
   end
 end
